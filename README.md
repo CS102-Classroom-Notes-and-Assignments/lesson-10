@@ -1,9 +1,7 @@
 # lesson-10
 
-### STRUCTURES, GITHUB FORKS
-
-Some review of previous concepts:
-MYSTRSTR & GREP
+### Review of Previous Concepts:
+#### MYSTRSTR & GREP
 ```c
 #include <stdio.h>
 
@@ -47,77 +45,7 @@ Code explanation (draw a diagram to help understand the code):
   - The return statement: ```(nstart-needle)``` gives the length of the word in needle. Haystack is at the end of the needle word in the haystack array so, ```(haystack - (nstart-needle))``` is the start of where needle is in the ```haystack```.
 
 
-### STRUCTURES AND FUNCTIONS
-#### POINTER EXAMPLES
-
-```c
-#include <stdio.h>
-#include <math.h>
-struct point {
-    int x;
-    int y;
-};
-struct rect {
-    struct point pt1;
-    struct point pt2;
-};
-// K&R pg. 130
-// makepoint:make a point from x and y components
-struct point makepoint(int x, int y)
-{
-    struct point temp;
-    temp.x = x;
-    temp.y = y;
-    return temp;
-}
-int main()
-{
-    struct rect screen;
-    struct point middle;
-    struct point makepoint(int, int);
-    screen.pt1 = makepoint(0, 0);
-    screen.pt2 = makepoint(4, 4);
-    middle = makepoint((screen.pt1.x + screen.pt2.x)/2, 
-                       (screen.pt1.y + screen.pt2.y)/2);
-    printf("screen pt1 = %d %d\n", screen.pt1.x, screen.pt1.y);
-    printf("screen pt2 = %d %d\n", screen.pt2.x, screen.pt2.y);
-    printf("middle = %d %d\n", middle.x, middle.y);
-    return 0;
-}
-```
-
-### ARRAYS OF STRUCTURES
-#### DECLARATIONS
-Declared like any other type array.
-
-```c
-#include <stdio.h>
-struct key {
-    char *word;
-    int count;
-};
-int main()
-{
-    struct key keytab[] = {
-        "auto", 0,
-        "break", 0,
-        "case", 0,
-        "char", 0,
-        "const", 0,
-        "continue", 0,
-        "default", 0,
-        /* ... */
-        "unsigned", 0,
-        "void", 0,
-        "volatile", 0,
-        "while", 0
-    };
-    printf("word[2]=%s count[2]=%d", keytab[2].word, keytab[2].count);
-    return 0;
-}
-```
-
-### KEYWORD COUNTING
+### Continuation of Keyword Counting from last class
 
 ```c
 #include <stdio.h>

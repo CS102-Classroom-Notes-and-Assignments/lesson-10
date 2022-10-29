@@ -1,7 +1,7 @@
 # lesson-10
 
-### Review of Previous Concepts:
-#### MYSTRSTR & GREP
+## Review of Previous Concepts:
+### MYSTRSTR & GREP
 ```c
 #include <stdio.h>
 
@@ -45,7 +45,7 @@ Code explanation (draw a diagram to help understand the code):
   - The return statement: ```(nstart-needle)``` gives the length of the word in needle. Haystack is at the end of the needle word in the haystack array so, ```(haystack - (nstart-needle))``` is the start of where needle is in the ```haystack```.
 
 
-### KEYWORD-COUNTING PROGRAM: Review
+## KEYWORD-COUNTING PROGRAM: Review
 
 We discussed the following program last class.
 
@@ -150,7 +150,7 @@ void ungetch(int c) // push character back on input
 ```
 
 
-#### KEYWORD-COUNTING PROGRAM W/ POINTERS to and arrays of structures
+## KEYWORD-COUNTING PROGRAM: above program using pointers to and arrays of structures
 - Using pointers instead of array indices: ```./a.exe < keywordCount.c```
 
 #### NOTES
@@ -260,7 +260,7 @@ void ungetch(int c) // push character back on input
 
 
 
-### SELF-REFERENTIAL STRUCTURES
+## SELF-REFERENTIAL STRUCTURES
 #### TREE EXAMPLE
 
 ```c
@@ -370,7 +370,7 @@ void ungetch(int c) // push character back on input
 }
 ```
 
-### TABLE LOOKUP
+## TABLE LOOKUP
 #### HASH TABLE
 
 ```c
@@ -450,7 +450,7 @@ int main()
 }
 ```
 
-### TYPEDEF
+## TYPEDEF
 #### BASIC TYPEDEF
 
 ```c
@@ -482,7 +482,7 @@ Treeptr talloc(void)
 }
 ```
 
-### GDB
+## GDB
 #### WHAT IS GDB?
 - A debugger for C and C++ (along with Pascal, Objective-C, and Fortran).
 - Does 4 main things:

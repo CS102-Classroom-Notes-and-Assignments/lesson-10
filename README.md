@@ -42,8 +42,9 @@ char *mystrstr(char *haystack, char *needle) {
     return haystack - (needle - nstart);
 }
 ```
-- Nstart and needle point to the beginning of needle. We increment haystack every iteration of the loop. When haystack == needle, we increment needle by 1. When needle points to the end of Janina, needle points to ‘\0’, and the loop iteration stops. 
-  - Now, (nstart-needle) gives the length of the word in needle. Haystack is at the end of the needle word in the haystack array so, (haystack - (nstart-needle)) is the start of where needle is in the haystack.
+Code explanation (draw a diagram to help understand the code):
+- ```nstart``` saves the beginning address of ```needle```. We increment ```haystack``` every iteration of the loop. When ```haystack == needle```, we also increment ```needle``` by 1. When needle points to the end of Janina, ```needle``` points to ‘\0’, and the loop iteration stops. 
+  - The return statement: ```(nstart-needle)``` gives the length of the word in needle. Haystack is at the end of the needle word in the haystack array so, ```(haystack - (nstart-needle))``` is the start of where needle is in the ```haystack```.
 
 
 ### STRUCTURES AND FUNCTIONS

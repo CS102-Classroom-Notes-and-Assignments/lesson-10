@@ -497,6 +497,9 @@ Treeptr talloc(void)
 }
 ```
 
+## Debugging
+In class we will go over how to use debugging in Replit/VSCode. Gdb is another way we can debug using the command line. The following section contains instructions on how to use gdb.
+
 ## GDB
 If you are using cygwin, this should have been installed when you downloaded cygwin. Otherwise, you can experiment with gdb on Replit.
 
@@ -704,7 +707,7 @@ int main()
 - (gdb) break segfault_watch.c:27 if a >=100
     - stops at line 27 if the variable a is greater than 100
 
-### GITHUB FORKS
+## GITHUB FORKS
 #### FORK EXAMPLE
 https://github.com/CS102D-Fall2020/forkme/settings 
 

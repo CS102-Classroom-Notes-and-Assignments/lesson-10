@@ -45,7 +45,9 @@ Code explanation (draw a diagram to help understand the code):
   - The return statement: ```(nstart-needle)``` gives the length of the word in needle. Haystack is at the end of the needle word in the haystack array so, ```(haystack - (nstart-needle))``` is the start of where needle is in the ```haystack```.
 
 
-### Continuation of Keyword Counting from last class
+### KEYWORD-COUNTING PROGRAM: Review
+
+We discussed the following program last class.
 
 ```c
 #include <stdio.h>
@@ -147,16 +149,14 @@ void ungetch(int c) // push character back on input
 }
 ```
 
-### POINTERS TO STRUCTURES
 
 #### KEYWORD-COUNTING PROGRAM W/ POINTERS to and arrays of structures
-Using pointers instead of array indices
-./a.exe < keywordCount.c
+- Using pointers instead of array indices: ```./a.exe < keywordCount.c```
 
 #### NOTES
-The return type of binsearch is a pointer to the key structure.
-The addition of 2 pointers is illegal, but subtraction is legal.
-Note that we also avoid illegal pointers.
+- The return type of binsearch is a pointer to the key structure.
+- The addition of 2 pointers is illegal, but subtraction is legal.
+- Note that we also avoid illegal pointers.
 
 ```c
 #include <stdio.h>

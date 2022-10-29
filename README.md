@@ -451,6 +451,21 @@ int main()
 ```
 
 ## TYPEDEF
+The C programming language provides a keyword called typedef, which you can use to give a type a new name. Following is an example to define a term BYTE for one-byte numbers − https://www.tutorialspoint.com/cprogramming/c_typedef.htm
+
+The following typedef:
+```c
+typedef unsigned char byte;
+````
+can be used to write this: 
+```c
+unsigned char b1, b2;
+```
+like this:
+```
+byte  b1, b2;
+```
+
 #### BASIC TYPEDEF
 
 ```c
@@ -466,7 +481,7 @@ p = (String) malloc(100);
 ```
 
 ### STRUCT TYPEDEF
-```
+```c
 typedef struct tnode *Treeptr;
 
 typedef struct tnode{   // the tree node:

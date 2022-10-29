@@ -439,10 +439,12 @@ void ungetch(int c) // push character back on input
     else
         buf[bufp++] = c;
 }
+```
 
-TABLE LOOKUP
-HASH TABLE
+### TABLE LOOKUP
+#### HASH TABLE
 
+```c
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -517,9 +519,12 @@ int main()
 
     return 0;
 }
+```
 
-TYPEDEF
-BASIC TYPEDEF
+### TYPEDEF
+#### BASIC TYPEDEF
+
+```c
 typedef int Length;
 
 Length len, maxlen;
@@ -529,9 +534,10 @@ typedef char *String;
 String p, ineptr[MAXLINES], alloc(int);
 int strcmp(String, String);
 p = (String) malloc(100);
+```
 
-STRUCT TYPEDEF
-
+### STRUCT TYPEDEF
+```
 typedef struct tnode *Treeptr;
 
 typedef struct tnode{   // the tree node:
@@ -545,17 +551,19 @@ Treeptr talloc(void)
 {
     return (Treeptr) malloc(sizeof(Treenode));
 }
+```
 
-GDB
-WHAT IS GDB?
-A debugger for C and C++ (along with Pascal, Objective-C, and Fortran).
-Does 4 main things:
-Start your program, specifying anything that might affect its behavior
-Make your program stop on specified conditions
-Examine what has happened when your program stopped
-Change things in your program so you can experiment with correcting the effects of one bug
+### GDB
+#### WHAT IS GDB?
+- A debugger for C and C++ (along with Pascal, Objective-C, and Fortran).
+- Does 4 main things:
+    - Start your program, specifying anything that might affect its behavior
+    - Make your program stop on specified conditions
+    - Examine what has happened when your program stopped
+    - Change things in your program so you can experiment with correcting the effects of one bug
 
-SAMPLE SEGMENTATION FAULT PROGRAM
+### SAMPLE SEGMENTATION FAULT PROGRAM
+```c
 #include <stdio.h>
 
 int main()
@@ -583,46 +591,50 @@ int main()
 
     return 0;
 }
+```
 
-COMPILING A PROGRAM FOR DEBUGGING
-gcc -g segfault.c
-The -g flag enables built-in debugging support; note that the file size is slightly bigger and it takes more time
-Gdb
-Start the gdb interface
-(gdb) help
-get the help menu
+### COMPILING A PROGRAM FOR DEBUGGING
+- gcc -g segfault.c
+    - The -g flag enables built-in debugging support; note that the file size is slightly bigger and it takes more time
+- Gdb
+    - Start the gdb interface
+- (gdb) help
+    - get the help menu
 
-RUNNING A PROGRAM IN GDB
-(gdb) file a.exe
-loads the executable in gdb
-(gdb) run
-runs the executable
-(gdb) continue
-continues the program
+`
+### RUNNING A PROGRAM IN GDB
+- (gdb) file a.exe
+    - loads the executable in gdb
+- (gdb) run
+    - runs the executable
+- (gdb) continue
+    - continues the program
 
-BREAKPOINTS
-BREAKPOINTS INSTRUCTIONS
-Places in code to tell gdb to stop so you can analyze the code
-(gdb) break segfault.c:8
-Note that it stops before an actionable line (initialization/assignment/function call)
-Can also break at a specific function w/ the function name
-(gdb) run
+### BREAKPOINTS
+#### BREAKPOINTS INSTRUCTIONS
+- Places in code to tell gdb to stop so you can analyze the code
+- (gdb) break segfault.c:8
+    - Note that it stops before an actionable line (initialization/assignment/function call)
+    - Can also break at a specific function w/ the function name
+- (gdb) run
 
-CHECKING VARIABLE VALUES
-(gdb) step
-steps through the program line by line; enter to repeat
-(gdb) next
-goes inside a function; more on that later
+#### CHECKING VARIABLE VALUES
+- (gdb) step
+    - steps through the program line by line; enter to repeat
+- (gdb) next
+    - goes inside a function; more on that later
 
-CHECKING VARIABLE VALUES
-(gdb) print a
-(gdb) print a_ptr
-(gdb) print *a_ptr
-(gdb) print ptr - NULL Pointer
-(gdb) print *ptr - can't access!
+#### CHECKING VARIABLE VALUES
+- (gdb) print a
+- (gdb) print a_ptr
+- (gdb) print *a_ptr
+- (gdb) print ptr - NULL Pointer
+- (gdb) print *ptr - can't access!
 
-STEPPING INTO FUNCTIONS
-STEPPING INTO FUNCTIONS SAMPLE
+### STEPPING INTO FUNCTIONS
+#### STEPPING INTO FUNCTIONS SAMPLE
+
+```c
 #include <stdio.h>
 
 void sample_function()
@@ -664,16 +676,17 @@ int main()
 
     return 0;
 }
+```
 
 ### STEPPING INTO A FUNCTION
-(gdb) break segfault_func.c:17
-(gdb) step
-Note that this time, we actually entered the function
-Also note that the variables are in the scope of the function, not main
+- (gdb) break segfault_func.c:17
+- (gdb) step
+    - Note that this time, we actually entered the function
+    - Also note that the variables are in the scope of the function, not main
 
-WATCHING VARIABLES
+### WATCHING VARIABLES
 
-MODIFIED PROGRAM
+#### MODIFIED PROGRAM
 ```c
 #include <stdio.h>
 
@@ -720,31 +733,32 @@ int main()
 }
 ```
 
-GDB WATCH
-gdb
-(gdb) file a.exe
-(gdb) break segfault_watch.c:17
-(gdb) run
-(gdb) watch a - whenever a changes, it will print the old and new values and stop before the next line
-(gdb) next
+#### GDB WATCH
+- gdb
+- (gdb) file a.exe
+- (gdb) break segfault_watch.c:17
+- (gdb) run
+- (gdb) watch a - whenever a changes, it will print the old and new values and stop before the next line
+- (gdb) next
 
-OTHER FEATURES
+### OTHER FEATURES
 
-OTHER GDB COMMANDS
-breaktrace - stack trace leading to a seg fault
-where - same as backtrace, but in middle of program (e.g. in a function or in main)
-finish - runs until current function finishes
-info breakpoints - shows all declared breakpoints
-clear file:linenum - deletes breakpoint
-delete - deletes all breakpoints
+#### OTHER GDB COMMANDS
+- breaktrace - stack trace leading to a seg fault
+- where - same as backtrace, but in middle of program (e.g. in a function or in main)
+- finish - runs until current function finishes
+- info breakpoints - shows all declared breakpoints
+- clear file:linenum - deletes breakpoint
+- delete - deletes all breakpoints
 
-CONDITIONAL BREAKPOINTS
-(gdb) break segfault_watch.c:27 if a >=100
-stops at line 27 if the variable a is greater than 100
+#### CONDITIONAL BREAKPOINTS
+- (gdb) break segfault_watch.c:27 if a >=100
+    - stops at line 27 if the variable a is greater than 100
 
-# GITHUB FORKS
-FORK EXAMPLE
+### GITHUB FORKS
+#### FORK EXAMPLE
 https://github.com/CS102D-Fall2020/forkme/settings 
 
 # Homework
 - The C Programming Language, 2nd Edition - Kerninghan & Ritchie, Chapter 6.3-6.8
+- hw link: 

@@ -498,6 +498,8 @@ Treeptr talloc(void)
 ```
 
 ## GDB
+If you are using cygwin, this should have been installed when you downloaded cygwin. Otherwise, you can experiment with gdb on Replit.
+
 #### WHAT IS GDB?
 - A debugger for C and C++ (along with Pascal, Objective-C, and Fortran).
 - Does 4 main things:
@@ -505,6 +507,9 @@ Treeptr talloc(void)
     - Make your program stop on specified conditions
     - Examine what has happened when your program stopped
     - Change things in your program so you can experiment with correcting the effects of one bug
+
+Resource on GDB:
+https://web.eecs.umich.edu/~sugih/pointers/gdbQS.html#:~:text=Setting%20breakpoints%20A%20breakpoint%20is,%5Bfilename%5D%3A%5Blinenumber%5D%22.
 
 ### SAMPLE SEGMENTATION FAULT PROGRAM
 ```c
@@ -540,7 +545,7 @@ int main()
 ### COMPILING A PROGRAM FOR DEBUGGING
 - gcc -g segfault.c
     - The -g flag enables built-in debugging support; note that the file size is slightly bigger and it takes more time
-- Gdb
+- gdb
     - Start the gdb interface
 - (gdb) help
     - get the help menu

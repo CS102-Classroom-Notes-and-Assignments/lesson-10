@@ -716,4 +716,3 @@ Resource: https://docs.github.com/en/pull-requests/collaborating-with-pull-reque
 
 # Homework
 - The C Programming Language, 2nd Edition - Kerninghan & Ritchie, Chapter 6.3-6.8
-- hw link: https://classroom.github.com/a/P_PMKr0c

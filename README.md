@@ -709,7 +709,9 @@ int main()
 ## GITHUB FORKS
 #### FORK EXAMPLE
 Original Repo: https://github.com/CS102-Classroom-Notes-and-Assignments/demo-repo
+
 Forkerd Repo: https://github.com/nsubbaian/demo-repo-fork
+
 Resource: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks
 
 # Homework

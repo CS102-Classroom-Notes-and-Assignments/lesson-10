@@ -708,8 +708,8 @@ int main()
     - stops at line 27 if the variable a is greater than 100
 
 ## GITHUB FORKS
-#### FORK EXAMPLE
-https://github.com/CS102D-Fall2020/forkme/settings 
+#### FORK EXAMPLE shown in class
+Resource: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks
 
 # Homework
 - The C Programming Language, 2nd Edition - Kerninghan & Ritchie, Chapter 6.3-6.8

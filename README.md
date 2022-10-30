@@ -553,7 +553,6 @@ int main()
 - (gdb) help
     - get the help menu
 
-`
 ### RUNNING A PROGRAM IN GDB
 - (gdb) file a.exe
     - loads the executable in gdb
@@ -708,7 +707,9 @@ int main()
     - stops at line 27 if the variable a is greater than 100
 
 ## GITHUB FORKS
-#### FORK EXAMPLE shown in class
+#### FORK EXAMPLE
+Original Repo: https://github.com/CS102-Classroom-Notes-and-Assignments/demo-repo
+Forkerd Repo: https://github.com/nsubbaian/demo-repo-fork
 Resource: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks
 
 # Homework
